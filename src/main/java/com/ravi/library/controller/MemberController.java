@@ -21,7 +21,7 @@ public class MemberController {
         return memberService.getAllMembers();
     }
 
-    @RequestMapping(value="loanbook/", method = RequestMethod.POST)
+    @RequestMapping(value="/loanbook", method = RequestMethod.POST)
     public ResponseEntity<String> loanBookToMember(@RequestBody RequestModel requestModel){
         String responseMessage;
         try{
@@ -36,7 +36,7 @@ public class MemberController {
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "returnbook/", method = RequestMethod.POST)
+    @RequestMapping(value = "/returnbook", method = RequestMethod.POST)
     public ResponseEntity<String> returnBookToLibrary(@RequestBody RequestModel requestModel){
         String responseMessage;
         try{
